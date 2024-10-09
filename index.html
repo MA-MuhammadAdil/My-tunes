@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <body>
+        <style>
+
+             /* Global settings */
+:root {
+    --purple500: #281154;
+    --purple300: #270082;
+    --purple360: #1b0058;
+    --red600: #dc0000;
+    --body: #f9f6ff;
+    --max-width: 1200px;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+ul > li > a,
+nav ul > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    color: white;
+}
+
+/* Responsive Layouts */
+header {
+    background-color: var(--purple300);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 5px 5px 35px black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.nav ul li {
+    border-bottom: 2px solid transparent;
+    transition: 0.2s ease-in;
+}
+
+.nav ul li:hover {
+    border-bottom: 2px solid white;
+    transition: 0.2s ease-in;
+}
+
+.hero-sec {
+    background-image: url(./images/hero_image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.hero-sec h1 {
+    font-size: 96px;
+}
+
+.hero-sec h3 {
+    font-size: 32px;
+}
+
+.Music-sec {
+    padding-top: 50px;
+    background-color: var(--purple500);
+}
+
+.Music-sec .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    text-align: center;
+    color: white;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    transition: 0.2s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
+}
+
+.primary-btn {
+    background-color: var(--red600);
+    color: white;
+}
+
+.secondary-btn {
+    background-color: var(--purple300);
+    color: white;
+}
+
+.about-music {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 500px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.video-sec {
+    background-image: url('./images/video.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 800px;
+    display: grid;
+    place-items: center;
+    color: white;
+    text-align: center;
+}
+
+.video-sec .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: -200px;
+}
+
+.gift-content {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gift-sec {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0;
+    gap: 50px;
+}
+
+#btn {
+    width: 150px;
+}
+
+.footer1 {
+    background-color: var(--purple360);
+    padding: 50px;
+}
+
+.footer1 .f-container {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+
+.footer1 h4 {
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+    margin-bottom: 10px;
+}
+
+.footer2 {
+    background-color: var(--purple300);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+.navbar{
+    background-color: var(--purple500);
+    box-shadow: 5px 5px 42px black  ;
+    color: white;
+}
+.navbar a{
+    color: white;
+}
+
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+    .hero-sec h1 {
+        font-size: 72px;
+    }
+
+    .hero-sec h3 {
+        font-size: 28px;
+    }
+
+    .Music-sec .container,
+    .about-music,
+    .video-sec .container {
+        padding: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display:flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    
+
+    .nav.active ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-sec h1 {
+        font-size: 48px;
+    }
+
+    .hero-sec h3 {
+        font-size: 24px;
+    }
+
+    .ipad-img {
+        margin-top: -300px;
+        top: 300px;
+    }
+
+    .about-music {
+        padding-top: 100px;
+    }
+
+    .gift-sec {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+ 
+
+@media (max-width: 320px) {
+
+    nav ul {
+        display:flex;
+        flex-direction: column !important;
+        gap: 15px;
+    }
+
+    
+
+
+    .hero-sec h1 {
+        font-size: 32px;
+    }
+    img {
+    max-width: 100%;
+    height: auto;
+}
+   
+
+
+    .hero-sec h3 {
+        font-size: 20px;
+    }
+
+    .Music-sec .container,
+    .about-music,
+    .video-sec .container {
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    #btn {
+        width: 120px;
+    }
+}
+
+.navbar{
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: var(--purple360);
+}
+  
+.ul-hover ul li:hover {
+    border-bottom: 2px solid white;
+}
+
+.ul-hover ul li{
+    border-bottom: 2px solid transparent;
+    transition: 0.2s ease-in-out;
+
+}
+.gift-card img{
+    width: 1500px;
+    height: 300px;
+}
+
+        </style>
+</head>
+<!-- 
+<header>
+<nav class="nav">
+    <div class="logo">
+        my Tunes
+    </div>
+    <ul>
+        <li><a href="#hero">Overview</a></li>
+        <li><a href="#Music">Music</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#gift-card">Gift Cards</a></li>
+    </ul>
+</nav>
+
+</header> -->
+ 
+<nav class="navbar navbar-expand-lg navbar-dark   fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><h1>My Tunes</h1></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">My Tunes</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body ul-hover">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 hover-ul" >
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#hero">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Music">Music</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#video">Video</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gift-card">Gift Cards</a>
+                    </li>
+                     
+                </ul>
+                 
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+<main>
+
+    <section class="hero-sec" id="hero">
+        <div class="container">
+            <h1>My Tune</h1>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit .</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa ad voluptate dignissimos non deserunt quasi qui exercitationem, dicta distinctio nemo maxime quam repellendus, placeat eos suscipit porro deleniti laudantium. Natus!</p>
+    </div>
+</section>
+
+<section class="Music-sec" id="Music">
+    <div class="container">
+        <h2><span><i class="fa fa-music"></i></span>Music</h2>
+
+        <h4>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ratione obcaecati fugiat. Vitae nulla, minima tempora assumenda modi vel, similique non a eius voluptatum voluptatibus sequi commodi quae. Sequi, asperiores.
+        </h4>
+        <button class="primaty-btn">
+            Start Your Trail Now
+        </button>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        </p>
+        <div class="ipad-img">
+            <img src="./images/ipad-iphone.png" >
+        </div>
+    </div>
+</section>
+
+<section class="about-music" >
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.  </h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa similique possimus vitae eveniet debitis officiis omnis laudantium vero, blanditiis et tempora inventore fuga non illum perferendis voluptas quia eligendi mollitia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam vitae exercitationem nesciunt rem, atque facere natus. Vitae, possimus ad vero doloribus nisi mollitia quasi excepturi itaque aliquid sit velit id.</p>
+    <button class="secondary-btn">Read More</button> 
+    <div class="mac">
+        <img src="./images/mac.png" class="">
+        
+    </div>
+</section>
+
+<section class="video-sec" id="video">
+    <div class="container">
+        <h3>Video</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus consequuntur, error quibusdam repellendus in natus qui aliquid soluta excepturi blanditiis saepe nobis culpa magnam maxime laudantium quae esse cumque voluptatum?</p>
+    </div>
+</section>
+
+
+<div class="container" id="gift-card">
+    <section class="gift-sec"  >
+        <div class="gift-card"  >
+        <img src="./images/gift_card.png" width="500px"   alt="">
+        </div>
+        <div class="gift-contant">
+            <h3>Gift Card</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, hic necessitatibus. Optio earum id aspernatur assumenda incidunt quia impedit ab maiores aliquam possimus sequi obcaecati aliquid commodi quasi praesentium, dignissimos molestias suscipit perferendis omnis maxime amet dolores! Ex sit, laborum harum odit sed mollitia suscipit? Nulla consectetur laudantium laboriosam  </p>
+    
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.  </p>
+            <hr>
+           
+                <button class="secondary-btn" id="btn" >Redeem</button>
+    
+            
+        </div>
+    </section>
+    
+</div>
+
+
+</main>
+ 
+<footer class="bg-body-tertiary text-center">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a
+        data-mdb-ripple-init
+          class="btn text-white btn-floating m-1"
+          style="background-color: #3b5998;"
+          href="https://www.facebook.com/profile.php?id=100093285117598"
+          role="button"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a
+          data-mdb-ripple-init
+          class="btn text-white btn-floating m-1"
+          style="background-color: #55acee;"
+          href="#!"
+          target="_blank"
+          role="button"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+        <!-- Google -->
+        <a
+          data-mdb-ripple-init
+          class="btn text-white btn-floating m-1"
+          style="background-color: #dd4b39;"
+          href="https://www.Google.com" target="_blank"
+          role="button"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a
+          data-mdb-ripple-init
+          class="btn text-white btn-floating m-1"
+          style="background-color: #ac2bac;"
+          href="https://www.instagram.com/its_muhammadadil/"
+          target="_blank"
+          role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a
+          data-mdb-ripple-init
+          class="btn text-white btn-floating m-1"
+          style="background-color: #0082ca;"
+          href="https://www.linkedin.com/in/muhammad-adil-871597316/"
+          target="_blank"
+          role="button"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <!-- Github -->
+        <a
+          data-mdb-ripple-init
+          class="btn text-white btn-floating m-1"
+          style="background-color: #333333;"
+          href="https://github.com/MA-MuhammadAdil"
+          role="button"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2020 Copyright:
+      <a class="text-body" href="#">Muhammad Adil</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js
+"></script>
+
+<script>
+
+ 
+
+</script>
+
+</body>
+</html>
